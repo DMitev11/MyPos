@@ -8,7 +8,7 @@ class StudentsOverviewDlg : public CDialogEx
 	DECLARE_DYNAMIC(StudentsOverviewDlg)
 
 public:
-	std::vector<SQLGUID> students;
+	std::vector<SQLGUID> m_students;
 	
 	StudentsOverviewDlg(CWnd* pParent = nullptr);   // standard constructor
 	virtual ~StudentsOverviewDlg();
@@ -23,4 +23,7 @@ protected:
 	virtual BOOL OnInitDialog(); 
 
 	DECLARE_MESSAGE_MAP()
+
+private:
+	CListCtrl m_list;
 };
